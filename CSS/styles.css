@@ -1,0 +1,72 @@
+body {
+    background-color: #eeeeee;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 79px;
+    color: #373a3c;
+}
+
+h1 {
+    font-size: 90px;
+}
+
+h2 {
+    font-size: 80px;
+}
+
+.calculator-title {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 79px;
+    /* identical to box height, or 110% */
+}
+
+p {
+    font-size: 24px;
+    line-height: 24px;
+    color: #373a3c;
+}
+
+.fibonacci-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    color: #373a3c;
+}
+
+.btn-calculator {
+    width: 16px;
+    height: 21px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.input-calculator {
+    width: 86px;
+    height: 38px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+#milestone3result {
+    position: absolute;
+    width: 28px;
+    height: 24px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    /* identical to box height, or 100% */
+    text-decoration-line: underline;
+    color: #373a3c;
+}
