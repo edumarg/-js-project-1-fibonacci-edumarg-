@@ -8,9 +8,9 @@ function getResultFromServer() {
             return response.json();
         })
         .then(function(data) {
-            const number = document.getElementById("milestone4Index");
-            const result = document.getElementById("milestone4Result");
-            number.value = data.number;
-            result.innerText = data.result;
+            const mynumber = document.getElementById("mynumber");
+            const myresult = document.getElementById("myresult");
+            mynumber.value = data.number;
+            myresult.innerText = data.result;
         });
 }

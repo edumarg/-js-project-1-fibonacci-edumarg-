@@ -15,8 +15,6 @@ function printResult() {
     return (myResult.innerText = fibonacciRecursion(mynumber.value));
 }
 
-console.log("value is", myResult.innerTex);
-
 button.addEventListener("click", function() {
     return (myResult.innerText = fibonacciRecursion(mynumber.value));
 });

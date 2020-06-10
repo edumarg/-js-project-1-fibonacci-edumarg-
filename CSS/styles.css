@@ -7,8 +7,34 @@ body {
     color: #373a3c;
 }
 
-a :link {
-    color: #ffffff;
+.nav-item {
+    align-self: flex-end;
+    color: #3d6ded;
+    font-size: 18px;
+    margin: 15px;
+    text-decoration: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:link {
+    color: #0d0d0d;
+}
+
+nav a:visited {
+    color: #3d6ded;
+}
+
+nav a:hover {
+    color: #2a3756;
+    font-weight: bold;
 }
 
 h1 {
