@@ -33,27 +33,25 @@ milestone2();
 
 //--Milestone 3--//
 let milestone3Index = document.getElementById("milestone3Index");
-let milestone3result = document.getElementById("milestone3result");
+let milestone3result = document.getElementById("milestone3Result");
 let button = document.getElementById("btnCalculator");
 
-console.log("value", fibonacci(milestone3Index.value));
+function printResult() {
+    return (milestone3result.innerText = fibonacciRecursion(
+        milestone3Index.value
+    ));
+}
 
-milestone3result.innerText = button.addEventListener(
-    "click",
-    fibonacci(milestone3Index.value)
-);
+console.log("value is", milestone3result.innerTex);
 
-console.log("result", milestone3result.innerText);
+button.addEventListener("click", function() {
+    return (milestone3result.innerText = fibonacciRecursion(
+        milestone3Index.value
+    ));
+});
 
 //--Milestone 3.1 Geekout--
-milestone3GeekText = document.getElementById("milestone3Geekout");
-fibonacciIndex = getRndInteger(0, 20);
-
 function fibonacciRecursion(index) {
     if (index < 2) return index; // Case for 0 and 1
     return fibonacciRecursion(index - 1) + fibonacciRecursion(index - 2); //case for 2 and bigger
 }
-console.log(fibonacciRecursion(fibonacciIndex));
-milestone3GeekText.innerText = `The fibonacci of ${fibonacciIndex} is ${fibonacciRecursion(
-  fibonacciIndex
-)}`;

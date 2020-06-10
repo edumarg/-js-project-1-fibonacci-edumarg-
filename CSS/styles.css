@@ -82,16 +82,17 @@ p {
     top: 229px;
 }
 
-#milestone3result {
+#milestone3Result {
     position: absolute;
     width: 28px;
     height: 24px;
+    left: 525px;
+    top: 236px;
+    font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 24px;
-    /* identical to box height, or 100% */
-    text-decoration-line: underline;
     color: #373a3c;
 }
 
