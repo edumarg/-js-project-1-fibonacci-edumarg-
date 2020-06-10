@@ -7,6 +7,10 @@ body {
     color: #373a3c;
 }
 
+a :link {
+    color: #ffffff;
+}
+
 h1 {
     font-size: 90px;
 }
@@ -82,7 +86,7 @@ p {
     top: 229px;
 }
 
-#milestone3Result {
+#myResult {
     position: absolute;
     width: 28px;
     height: 24px;
@@ -94,8 +98,4 @@ p {
     font-size: 24px;
     line-height: 24px;
     color: #373a3c;
-}
-
-calculator-card {
-    height: 1024px;
 }
