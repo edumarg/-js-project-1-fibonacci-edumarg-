@@ -1,9 +1,9 @@
 let myNumber = document.getElementById("myNumber");
 let myResult = document.getElementById("myResult");
-const SERVER_URL = `http://localhost:5050/fibonacci/${myNumber.value}`;
 let button = document.getElementById("btnCalculator");
 
 button.addEventListener("click", function() {
+    let SERVER_URL = `http://localhost:5050/fibonacci/${myNumber.value}`;
     fetch(SERVER_URL)
         .then(function(response) {
             console.log(response);

@@ -38,23 +38,29 @@
                 </nav>
             </div>
         </div>
-        <!-- ↑↑ End Row for Milestone1 ↑↑-->
+        <!-- ↑↑ End Row for buttons ↑↑-->
 
         <!-- ↓↓ Row for Milestone 3 ↓↓-->
-        <div class="row">
-            <div class="col-lg-12 position-relative p-4">
-                <h1 class="calculator-title">Fibonacci Calculator</h1>
-                <div class="d-flex">
-                    <p class="fibonacci-text">The fibonacci of</p>
+        <div class="row position-relative">
+            <div class="col-lg-12 p-4">
+                <!-- ↓↓ Row for Milestone 3 titel ↓↓-->
+                <div class="row">
+                    <h1 class="calculator-title">Fibonacci Calculator</h1>
+                </div>
+                <!-- ↑↑ End Row Milestone 3 title ↑↑-->
+                <!-- ↓↓ Row for Milestone 3 calculation ↓↓-->
+                <div class="row d-flex align-content-start">
+                    <span class="fibonacci-text">The fibonacci of</span>
                     <input class="input-calculator" type="number" id="myNumber" name="myNumber" min="0" max="50" value="0" />
                     <button type="button" class="btn btn-primary btn-sm btn-calculator" id="btnCalculator">
               is
             </button>
-                    <p id="myResult" name="myResult"></p>
+                    <p id="myResult" name="myResult" class="myResult"></p>
+                    <div class="m-0 p-0">
+                        <img src="./img/loading.png" class="load" />
+                    </div>
                 </div>
-                <div class="load">
-                    <img href="./img/loading.png" />
-                </div>
+                <!-- ↑↑ End Row Milestone 3 calculation ↑↑-->
             </div>
         </div>
         <!-- ↑↑ End Row for Milestone  3 ↑↑-->

@@ -66,7 +66,7 @@ p {
 
 .fibonacci-text {
     left: 10.563rem;
-    top: 15.75rem;
+    top: 14.75rem;
     font-style: normal;
     font-weight: normal;
     font-size: 1.5rem;
@@ -75,6 +75,8 @@ p {
     position: absolute;
     width: 11.813rem;
     height: 1.5rem;
+    left: 169px;
+    top: 236px;
 }
 
 .position-relative {
@@ -111,7 +113,7 @@ p {
     top: 14.313rem;
 }
 
-#myResult {
+.myResult {
     position: absolute;
     width: 1.75rem;
     height: 1.5rem;
@@ -125,18 +127,16 @@ p {
     color: #373a3c;
 }
 
-.spin {
-    animation: spin 3s linear infinite;
-    font-size: 15rem;
-    text-align: center;
-    display: none;
-    position: absolute;
-    width: 3.25rem;
-    height: 2.5rem;
-    left: 32.813rem;
-    top: 14.75rem;
+@keyframes load {
+    to {
+        transform: rotateZ(360deg);
+    }
 }
 
-.show {
-    display: block;
+.load {
+    display: none;
+    animation: load 3s linear infinite;
+    position: absolute;
+    left: 32.813rem;
+    top: 14.75rem;
 }
