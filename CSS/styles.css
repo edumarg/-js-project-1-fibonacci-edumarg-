@@ -130,4 +130,13 @@ p {
     font-size: 15rem;
     text-align: center;
     display: none;
+    position: absolute;
+    width: 3.25rem;
+    height: 2.5rem;
+    left: 32.813rem;
+    top: 14.75rem;
+}
+
+.show {
+    display: block;
 }

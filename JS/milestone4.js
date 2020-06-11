@@ -1,7 +1,7 @@
-const myNumber = document.getElementById("myNumber");
-const myResult = document.getElementById("myResult");
+let myNumber = document.getElementById("myNumber");
+let myResult = document.getElementById("myResult");
 const SERVER_URL = `http://localhost:5050/fibonacci/${myNumber.value}`;
-const button = document.getElementById("btnCalculator");
+let button = document.getElementById("btnCalculator");
 
 button.addEventListener("click", function() {
     fetch(SERVER_URL)
