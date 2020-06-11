@@ -7,16 +7,16 @@ function fibonacci(index) {
     return fibonacciSeq[index];
 }
 
-let mynumber = document.getElementById("mynumber");
+let mynumber = document.getElementById("myNumber");
 let myResult = document.getElementById("myResult");
 let button = document.getElementById("btnCalculator");
 
 function printResult() {
-    return (myResult.innerText = fibonacciRecursion(mynumber.value));
+    return (myResult.innerText = fibonacciRecursion(myNumber.value));
 }
 
 button.addEventListener("click", function() {
-    return (myResult.innerText = fibonacciRecursion(mynumber.value));
+    return (myResult.innerText = fibonacciRecursion(myNumber.value));
 });
 
 //--Milestone 3.1 Geekout--
