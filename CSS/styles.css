@@ -3,15 +3,15 @@ body {
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
-    line-height: 79px;
+    line-height: 74.938 rem;
     color: #373a3c;
 }
 
 .nav-item {
     align-self: flex-end;
     color: #3d6ded;
-    font-size: 18px;
-    margin: 15px;
+    font-size: 1.125rem;
+    margin: 0.938rem;
     text-decoration: none;
 }
 
@@ -38,44 +38,43 @@ nav a:hover {
 }
 
 h1 {
-    font-size: 90px;
+    font-size: 5.263rem;
 }
 
 h2 {
-    font-size: 80px;
+    font-size: 5rem;
 }
 
 .calculator-title {
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
-    font-size: 72px;
-    line-height: 79px;
+    font-size: 4.5rem;
+    line-height: 4.938rem;
     position: absolute;
-    width: 672px;
-    height: 79px;
-    left: 164px;
-    top: 100px;
-    /* identical to box height, or 110% */
+    width: 42rem;
+    height: 4.938rem;
+    left: 10.25rem;
+    top: 6.25rem;
 }
 
 p {
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     color: #373a3c;
 }
 
 .fibonacci-text {
-    left: 169px;
-    top: 236px;
+    left: 10.563rem;
+    top: 15.75rem;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     color: #373a3c;
     position: absolute;
-    width: 189px;
-    height: 24px;
+    width: 11.813rem;
+    height: 1.5rem;
 }
 
 .position-relative {
@@ -88,40 +87,47 @@ p {
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 21px;
+    font-size: 1rem;
+    line-height: 1.313rem;
     text-align: center;
     color: #ffffff;
     position: absolute;
-    width: 39px;
-    height: 38px;
-    left: 472px;
-    top: 229px;
+    width: 2.438rem;
+    height: 2.375rem;
+    left: 29.5rem;
+    top: 14.31rem;
 }
 
 .input-calculator {
-    width: 86px;
-    height: 38px;
+    width: 5.375rem;
+    height: 2.375;
     border: 1px solid #cccccc;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     position: absolute;
-    width: 86px;
-    height: 38px;
-    left: 372px;
-    top: 229px;
+    width: 5.375rem;
+    height: 2.375rem;
+    left: 23.25rem;
+    top: 14.313rem;
 }
 
 #myResult {
     position: absolute;
-    width: 28px;
-    height: 24px;
-    left: 525px;
-    top: 236px;
+    width: 1.75rem;
+    height: 1.5rem;
+    left: 32.813rem;
+    top: 14.75rem;
     font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     color: #373a3c;
+}
+
+.spin {
+    animation: spin 3s linear infinite;
+    font-size: 15rem;
+    text-align: center;
+    display: none;
 }
