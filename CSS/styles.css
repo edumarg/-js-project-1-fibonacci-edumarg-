@@ -1,10 +1,10 @@
 body {
     background-color: #ffff;
-    font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
     line-height: 74.938 rem;
     color: #373a3c;
+    min-height: 100%;
 }
 
 .nav-item {
@@ -46,16 +46,13 @@ h2 {
 }
 
 .calculator-title {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
     font-size: 4.5rem;
     line-height: 4.938rem;
     position: absolute;
-    width: 42rem;
-    height: 4.938rem;
     left: 10.25rem;
     top: 6.25rem;
+    width: 42rem;
+    height: 4.938rem;
 }
 
 p {
@@ -65,18 +62,14 @@ p {
 }
 
 .fibonacci-text {
-    left: 10.563rem;
-    top: 14.75rem;
-    font-style: normal;
-    font-weight: normal;
     font-size: 1.5rem;
     line-height: 1.5rem;
     color: #373a3c;
     position: absolute;
+    left: 10.563rem;
+    top: 14.75rem;
     width: 11.813rem;
     height: 1.5rem;
-    left: 169px;
-    top: 236px;
 }
 
 .position-relative {
@@ -84,20 +77,15 @@ p {
 }
 
 .btn-calculator {
-    /* width: 16px;
-    height: 21px; */
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
     font-size: 1rem;
     line-height: 1.313rem;
     text-align: center;
     color: #ffffff;
-    position: absolute;
     width: 2.438rem;
     height: 2.375rem;
+    position: absolute;
     left: 29.5rem;
-    top: 14.31rem;
+    top: 14.315rem;
 }
 
 .input-calculator {
@@ -107,24 +95,21 @@ p {
     box-sizing: border-box;
     border-radius: 0.25rem;
     position: absolute;
-    width: 5.375rem;
-    height: 2.375rem;
     left: 23.25rem;
     top: 14.313rem;
 }
 
 .myResult {
-    position: absolute;
+    display: none;
     width: 1.75rem;
     height: 1.5rem;
-    left: 32.813rem;
-    top: 14.75rem;
-    font-family: Open Sans;
-    font-style: normal;
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 1.5rem;
     color: #373a3c;
+    position: absolute;
+    left: 32.813rem;
+    top: 14.75rem;
 }
 
 @keyframes load {
@@ -139,4 +124,41 @@ p {
     position: absolute;
     left: 32.813rem;
     top: 14.75rem;
+}
+
+.error-msg-50,
+.error-msg-42,
+.error-msg-0 {
+    display: none;
+    position: absolute;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.error-msg-50 {
+    /* display: none;
+    position: absolute; */
+    width: 11.25rem;
+    height: 2.063rem;
+    left: 17.375rem;
+    top: 17.188rem;
+    background: #f2dede;
+    border: 1px solid #ebcccc;
+    border-radius: 4px;
+    /* font-size: 1rem;
+    line-height: 1.5rem; */
+    color: #a94442;
+}
+
+.error-msg-42,
+.error-msg-0 {
+    /* display: none;
+    position: absolute; */
+    width: 17.313rem;
+    height: 1.5rem;
+    left: 32.813rem;
+    top: 14.75rem;
+    /* font-size: 1rem;
+    line-height: 1.5rem; */
+    color: #d9534f;
 }
