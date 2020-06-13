@@ -180,3 +180,11 @@ p {
     font-size: 1.5rem;
     color: #373a3c;
 }
+
+.save-calculation-results {
+    position: absolute;
+    left: 11.813rem;
+    top: 17.188rem;
+    font-size: 1rem;
+    color: #373a3c;
+}

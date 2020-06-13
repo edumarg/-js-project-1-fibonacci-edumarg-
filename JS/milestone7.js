@@ -4,10 +4,32 @@ let button = document.getElementById("btnCalculator");
 let load = document.getElementById("load");
 let errorMsg50 = document.getElementById("errorMsg50");
 let sortedData;
+let saveCalculationCheckBox = document.getElementById(
+    "saveCalculationCheckBox"
+);
 
-button.addEventListener("click", getFibonacciFromServer);
 document.onload = callPastResults();
-button.addEventListener("click", callPastResults);
+// if save claculation is not checek do following logic
+
+button.addEventListener("click", callFibonacciResult);
+
+function callFibonacciResult() {
+    if (!saveCalculationCheckBox.checked) {
+        printResult();
+    } else if (saveCalculationCheckBox.checked) {
+        getFibonacciFromServer();
+        callPastResults();
+    }
+}
+
+function fibonacciRecursion(index) {
+    if (index < 2) return index; // Case for 0 and 1
+    return fibonacciRecursion(index - 1) + fibonacciRecursion(index - 2); //case for 2 and bigger
+}
+
+function printResult() {
+    return (myResult.innerText = fibonacciRecursion(myNumber.value));
+}
 
 function getFibonacciFromServer() {
     if (myNumber.value > 50) {

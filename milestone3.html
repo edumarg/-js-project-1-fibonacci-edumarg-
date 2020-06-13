@@ -55,7 +55,7 @@
                 <div class="row p-0">
                     <div class="col-lg-12 m-0 p-0">
                         <div class="d-flex align-content-center m-0 p-0">
-                            <span class="fibonacci-text d-flex">The fibonacci of</span>
+                            <p class="fibonacci-text d-flex">The Fibonacci of</p>
                             <input class="input-calculator" type="number" id="myNumber" name="myNumber" value="0" />
                             <button type="button" class="btn btn-primary btn-sm btn-calculator" id="btnCalculator">
                   is
@@ -75,6 +75,14 @@
                                 Server Error: 42 is the meaning of life
                             </p>
                         </div>
+                        <form class="save-calculation-results">
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="saveCalculationCheckBox" />
+                                <label class="form-check-label" for="saveCalculationCheckBox">
+                    Save Calculation
+                  </label>
+                            </div>
+                        </form>
                         <div class="d-flex justify-content-center align-content-center p-0 m-0">
                             <p class="p-0 m-0 error-msg-0" id="errorMsg0">
                                 Server Error: number can't be smaller than 1
@@ -90,9 +98,15 @@
                             <span>Results</span>
                         </div>
                         <div class="row results-table d-flex flex-column">
-                            <p class="pb-1 border-bottom border-secondary" id="firstLineResults"></p>
-                            <p class="pb-1 border-bottom border-secondary" id="secondLineResults"></p>
-                            <p class="pb-1 border-bottom border-secondary" id="thirdLineResults"></p>
+                            <div class="pb-1 mb-3 border-bottom border-secondary">
+                                <p id="firstLineResults"></p>
+                            </div>
+                            <div class="pb-1 mb-3 border-bottom border-secondary">
+                                <p id="secondLineResults"></p>
+                            </div>
+                            <div class="pb-1 mb-3 border-bottom border-secondary">
+                                <p id="thirdLineResults"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -104,6 +118,6 @@
     <!-- ↑↑ End of container ↑↑-->
 </body>
 
-<script src="./JS/milestone6.js"></script>
+<script src="./JS/milestone7.js"></script>
 
 </html>
