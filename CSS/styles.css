@@ -99,7 +99,7 @@ p {
     top: 14.313rem;
 }
 
-.myResult {
+.my-result {
     display: none;
     width: 1.75rem;
     height: 1.5rem;
@@ -161,4 +161,22 @@ p {
     /* font-size: 1rem;
     line-height: 1.5rem; */
     color: #d9534f;
+}
+
+.results-title {
+    position: absolute;
+    width: 11.375rem;
+    height: 4.5rem;
+    left: 10.25rem;
+    top: 21.688rem;
+    font-size: 3.375rem;
+    color: #373a3c;
+}
+
+.results-table {
+    position: absolute;
+    left: 10.25rem;
+    top: 29.938rem;
+    font-size: 1.5rem;
+    color: #373a3c;
 }

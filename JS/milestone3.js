@@ -15,9 +15,7 @@ function printResult() {
     return (myResult.innerText = fibonacciRecursion(myNumber.value));
 }
 
-button.addEventListener("click", function() {
-    return (myResult.innerText = fibonacciRecursion(myNumber.value));
-});
+button.addEventListener("click", printResult);
 
 //--Milestone 3.1 Geekout--
 function fibonacciRecursion(index) {
