@@ -36,7 +36,6 @@ function getFibonacciFromServer() {
         load.style.display = "none";
         myResult.style.display = "none";
         errorMsg50.style.display = "block";
-        myResult.classList.remove("error-msg");
     } else if (myNumber.value <= 50) {
         let SERVER_URL = `http://localhost:5050/fibonacci/${myNumber.value}`;
         load.style.display = "block";
@@ -64,6 +63,7 @@ function getFibonacciFromServer() {
                     load.style.display = "none";
                     myResult.style.display = "block";
                     errorMsg50.style.display = "none";
+                    myResult.classList.remove("error-msg");
                 } else if (typeof data === "string") {
                     console.log(data);
                     myResult.innerText = `Server Error: ${data}`;
@@ -96,13 +96,9 @@ function callPastResults() {
             let lastResults = [];
             for (let i = 0; i < 4; i++) {
                 lastResults.push(
-                    `
-                        The Fibonacci of $ { sortedData[i].number }
-                        is $ {
-                            sortedData[i].result
-                        }
-                        Calculated at $ { Date(sortedData[i].createdDate) }
-                        `
+                    ` The Fibonacci of ${sortedData[i].number} is ${
+            sortedData[i].result
+          } Calculated at ${Date(sortedData[i].createdDate)}`
                 );
             }
             firstLineResults.innerText = lastResults[0];
