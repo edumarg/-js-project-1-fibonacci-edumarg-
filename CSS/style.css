@@ -7,36 +7,6 @@ body {
     min-height: 100%;
 }
 
-.nav-item {
-    align-self: flex-end;
-    color: #3d6ded;
-    font-size: 1.125rem;
-    margin: 0.938rem;
-    text-decoration: none;
-}
-
-nav li {
-    display: inline-block;
-    padding: 0.5rem;
-}
-
-nav a {
-    text-decoration: none;
-}
-
-nav a:link {
-    color: #0d0d0d;
-}
-
-nav a:visited {
-    color: #3d6ded;
-}
-
-nav a:hover {
-    color: #2a3756;
-    font-weight: bold;
-}
-
 h1 {
     font-size: 5.263rem;
 }
@@ -50,13 +20,6 @@ h2 {
     line-height: 4.938rem;
     width: 42rem;
     height: 4.938rem;
-    margin-top: 6.25rem;
-    margin-left: 10.25rem;
-}
-
-.fibonacci-calculation {
-    margin-left: 10.563rem;
-    margin-top: 3.563rem;
 }
 
 p {
@@ -71,7 +34,6 @@ p {
     color: #373a3c;
     width: 11.813rem;
     height: 1.5rem;
-    margin-left: 0.875rem;
 }
 
 .btn-calculator {
@@ -81,7 +43,6 @@ p {
     color: #ffffff;
     width: 2.438rem;
     height: 2.375rem;
-    margin-left: 0.875rem;
 }
 
 .input-calculator {
@@ -90,7 +51,6 @@ p {
     border: 1px solid #cccccc;
     box-sizing: border-box;
     border-radius: 0.25rem;
-    margin-left: 0.875rem;
 }
 
 .my-result {
@@ -101,7 +61,6 @@ p {
     font-size: 1.5rem;
     line-height: 1.5rem;
     color: #373a3c;
-    margin-left: 0.875rem;
 }
 
 @keyframes load {
@@ -124,8 +83,6 @@ p {
 
 .error-msg-50 {
     height: 2.063rem;
-    margin-left: 7.375rem;
-    margin-top: 0.5rem;
     background: #f2dede;
     border: 1px solid #ebcccc;
     border-radius: 4px;
@@ -145,15 +102,11 @@ p {
     height: 4.5rem;
     font-size: 3.375rem;
     color: #373a3c;
-    margin-left: 10.25rem;
-    margin-top: 5rem;
 }
 
 .results-table {
     font-size: 1.5rem;
     color: #373a3c;
-    margin-left: 10.25rem;
-    margin-top: 3.75rem;
 }
 
 .save-calculation-results {
