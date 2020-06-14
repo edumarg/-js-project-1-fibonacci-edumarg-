@@ -8,17 +8,13 @@ let saveCalculationCheckBox = document.getElementById(
     "saveCalculationCheckBox"
 );
 
-document.onload = callPastResults();
-// if save claculation is not checek do following logic
-
-button.addEventListener("click", callFibonacciResult);
-
 function callFibonacciResult() {
     myResult.classList.remove("error-msg");
+    handleLoader("none", "none", "none");
     if (!saveCalculationCheckBox.checked) {
-        internalResult();
+        fibonacciInternal();
     } else if (saveCalculationCheckBox.checked) {
-        getFibonacciFromServer();
+        fibonacciFromServer();
         callPastResults();
     }
 }
@@ -28,53 +24,56 @@ function fibonacciRecursion(index) {
     return fibonacciRecursion(index - 1) + fibonacciRecursion(index - 2); //case for 2 and bigger
 }
 
-function internalResult() {
+function fibonacciInternal() {
+    handleLoader("none", "block", "none");
     return (myResult.innerText = fibonacciRecursion(myNumber.value));
 }
 
-function getFibonacciFromServer() {
+function handleLoader(display1, display2, display3) {
+    load.style.display = display1;
+    myResult.style.display = display2;
+    errorMsg50.style.display = display3;
+}
+
+function fibonacciFromServer() {
     if (myNumber.value > 50) {
-        load.style.display = "none";
-        myResult.style.display = "none";
-        errorMsg50.style.display = "block";
+        handleLoader("none", "none", "block");
     } else if (myNumber.value <= 50) {
-        let SERVER_URL = `http://localhost:5050/fibonacci/${myNumber.value}`;
-        load.style.display = "block";
-        myResult.style.display = "none";
-        errorMsg50.style.display = "none";
-        fetch(SERVER_URL)
-            .then(function(response) {
-                console.log(response);
-                console.log(response.status);
-                if (response.status === 200) {
-                    return response.json();
-                }
-                if (response.status === 400) {
-                    console.log(response.text);
-                    return response.text();
-                }
-            })
-            .catch(function(error) {
-                console.error(`Error`, error);
-            })
-            .then(function(data) {
-                if (typeof data === "object") {
-                    console.log(data);
-                    myResult.innerText = data.result;
-                    load.style.display = "none";
-                    myResult.style.display = "block";
-                    errorMsg50.style.display = "none";
-                    myResult.classList.remove("error-msg");
-                } else if (typeof data === "string") {
-                    console.log(data);
-                    myResult.innerText = `Server Error: ${data}`;
-                    load.style.display = "none";
-                    myResult.style.display = "block";
-                    errorMsg50.style.display = "none";
-                    myResult.classList.add("error-msg");
-                }
-            });
+        fetchFibonacciServer();
     }
+}
+
+function fetchFibonacciServer() {
+    let SERVER_URL = `http://localhost:5050/fibonacci/${myNumber.value}`;
+    handleLoader("block", "none", "none");
+    fetch(SERVER_URL)
+        .then(function(response) {
+            console.log(response);
+            console.log(response.status);
+            if (response.status === 200) {
+                return response.json();
+            }
+            if (response.status === 400) {
+                console.log(response.text);
+                return response.text();
+            }
+        })
+        .then(function(data) {
+            if (typeof data === "object") {
+                console.log(data);
+                myResult.innerText = data.result;
+                handleLoader("none", "block", "none");
+                myResult.classList.remove("error-msg");
+            } else if (typeof data === "string") {
+                console.log(data);
+                myResult.innerText = `Server Error: ${data}`;
+                handleLoader("none", "block", "none");
+                myResult.classList.add("error-msg");
+            }
+        })
+        .catch(function(error) {
+            console.error(`Error`, error);
+        });
 }
 
 function callPastResults() {
@@ -84,20 +83,13 @@ function callPastResults() {
             console.log("milestone6", response);
             return response.json();
         })
-        .catch(function(error) {
-            console.error(
-                `
-                        Error `,
-                error
-            );
-        })
         .then(function(data) {
             let receivedData = data.results;
             sortedData = receivedData.sort((a, b) => b.createdDate - a.createdDate);
             let lastResults = [];
             for (let i = 0; i < 4; i++) {
                 lastResults.push(
-                    ` The Fibonacci of ${sortedData[i].number} is ${
+                    `The Fibonacci of ${sortedData[i].number} is ${
             sortedData[i].result
           } Calculated at ${Date(sortedData[i].createdDate)}`
                 );
@@ -105,5 +97,11 @@ function callPastResults() {
             firstLineResults.innerText = lastResults[0];
             secondLineResults.innerText = lastResults[1];
             thirdLineResults.innerText = lastResults[2];
+        })
+        .catch(function(error) {
+            console.error(`Error`, error);
         });
 }
+
+document.onload = callPastResults();
+button.addEventListener("click", callFibonacciResult);

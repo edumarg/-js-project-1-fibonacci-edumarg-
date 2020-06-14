@@ -5,10 +5,6 @@ let load = document.getElementById("load");
 let errorMsg50 = document.getElementById("errorMsg50");
 let sortedData;
 
-button.addEventListener("click", getFibonacciFromServer);
-document.onload = callPastResults();
-button.addEventListener("click", callPastResults);
-
 function getFibonacciFromServer() {
     if (myNumber.value > 50) {
         load.style.display = "none";
@@ -81,3 +77,7 @@ function callPastResults() {
             thirdLineResults.innerText = lastResults[2];
         });
 }
+
+button.addEventListener("click", getFibonacciFromServer);
+document.onload = callPastResults();
+button.addEventListener("click", callPastResults);
