@@ -12,37 +12,9 @@
 <body>
     <!-- ↓↓ container ↓↓-->
     <div class="container-fluid">
-        <!-- ↓↓ Row for title ↓↓-->
-        <div class="row">
-            <div class="col-lg-12 d-flex justify-content-center p-4">
-                <h1>Fibonnaci Project</h1>
-            </div>
-        </div>
-        <!-- ↑↑ End Row for title ↑↑-->
-        <!-- ↓↓ Row for buttons ↓↓-->
-        <div class="row">
-            <div class="col-lg-12 d-flex justify-content-center p-4 bg-white">
-                <nav class="nav-item">
-                    <ul>
-                        <li>
-                            <a href=" ./milestone1.html ">Milestone 1</a>
-                        </li>
-
-                        <li>
-                            <a href="./milestone2.html ">Milestone 2 </a>
-                        </li>
-                        <li>
-                            <a href="./index.html ">Home</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <!-- ↑↑ End Row for buttons ↑↑-->
-
         <!-- ↓↓ Row for Milestone 3 ↓↓-->
-        <div class="row">
-            <div class="col-lg-12 p-4 position-relative">
+        <div class="row m-0 p-0">
+            <div class="col-lg-12 p-4">
                 <!-- ↓↓ Row for Milestone 3 titel ↓↓-->
                 <div class="row">
                     <div class="col-lg-12 d-flex">
@@ -52,24 +24,35 @@
                 <!-- ↑↑ End Row Milestone 3 title ↑↑-->
 
                 <!-- ↓↓ Row for Milestone 3 calculation ↓↓-->
-                <div class="row p-0">
+                <div class="row fibonacci-calculation">
                     <div class="col-lg-12 m-0 p-0">
-                        <div class="d-flex align-content-center m-0 p-0">
-                            <p class="fibonacci-text d-flex">The Fibonacci of</p>
-                            <input class="input-calculator" type="number" id="myNumber" name="myNumber" value="0" />
+                        <div class="d-flex align-items-center m-0 p-0">
+                            <p class="fibonacci-text d-flex align-self-center pt-2">
+                                The Fibonacci of
+                            </p>
+                            <input class="input-calculator d-flex" type="number" id="myNumber" name="myNumber" value="0" />
                             <button type="button" class="btn btn-primary btn-sm btn-calculator" id="btnCalculator">
                   is
                 </button>
-                            <p id="myResult" name="myResult" class="my-result"></p>
-                            <div class="m-0 p-0">
-                                <img src="./img/loading.png" class="load" id="load" />
+                            <p id="myResult" name="myResult" class="my-result ml-3 d-flex"></p>
+                            <div class="m-0 p-0 d-flex">
+                                <img src="./img/loading.png" class="load ml-3" id="load" />
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center align-content-center p-1">
+                        <div class="d-flex align-content-center mt-1">
                             <p class="p-1 error-msg-50" id="errorMsg50">
                                 Can't be larger than 50
                             </p>
                         </div>
+
+                        <form class="save-calculation-results">
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="saveCalculationCheckBox" />
+                                <label class="form-check-label" for="saveCalculationCheckBox">
+                    Save Calculation
+                  </label>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <!-- ↑↑ End Row Milestone 3 calculation ↑↑-->
@@ -133,6 +116,6 @@
     </div>
 </footer>
 
-<script src="./JS/milestone6.js"></script>
+<script src="./JS/milestone7.js"></script>
 
 </html>

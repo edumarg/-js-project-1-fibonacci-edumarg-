@@ -14,6 +14,7 @@ function getFibonacciFromServer() {
         .then(function(data) {
             console.log(data);
             myResult.innerText = data.result;
+            console.log("my result", myResult.innerText);
         })
         .catch(function(error) {
             console.error("Error:", error);

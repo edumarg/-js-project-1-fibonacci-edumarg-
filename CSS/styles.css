@@ -48,11 +48,15 @@ h2 {
 .calculator-title {
     font-size: 4.5rem;
     line-height: 4.938rem;
-    position: absolute;
-    left: 10.25rem;
-    top: 6.25rem;
     width: 42rem;
     height: 4.938rem;
+    margin-top: 6.25rem;
+    margin-left: 10.25rem;
+}
+
+.fibonacci-calculation {
+    margin-left: 10.563rem;
+    margin-top: 3.563rem;
 }
 
 p {
@@ -65,15 +69,9 @@ p {
     font-size: 1.5rem;
     line-height: 1.5rem;
     color: #373a3c;
-    position: absolute;
-    left: 10.563rem;
-    top: 14.75rem;
     width: 11.813rem;
     height: 1.5rem;
-}
-
-.position-relative {
-    position: relative;
+    margin-left: 0.875rem;
 }
 
 .btn-calculator {
@@ -83,33 +81,27 @@ p {
     color: #ffffff;
     width: 2.438rem;
     height: 2.375rem;
-    position: absolute;
-    left: 29.5rem;
-    top: 14.315rem;
+    margin-left: 0.875rem;
 }
 
 .input-calculator {
     width: 5.375rem;
-    height: 2.375;
+    height: 2.375rem;
     border: 1px solid #cccccc;
     box-sizing: border-box;
     border-radius: 0.25rem;
-    position: absolute;
-    left: 23.25rem;
-    top: 14.313rem;
+    margin-left: 0.875rem;
 }
 
 .my-result {
-    display: none;
+    display: block;
     width: 1.75rem;
     height: 1.5rem;
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 1.5rem;
     color: #373a3c;
-    position: absolute;
-    left: 32.813rem;
-    top: 14.75rem;
+    margin-left: 0.875rem;
 }
 
 @keyframes load {
@@ -121,76 +113,55 @@ p {
 .load {
     display: none;
     animation: load 3s linear infinite;
-    position: absolute;
-    left: 32.813rem;
-    top: 14.75rem;
 }
 
 .error-msg-50,
 .error-msg {
     display: none;
-    position: absolute;
     font-size: 1rem;
     line-height: 1.5rem;
 }
 
 .error-msg-50 {
-    /* display: none;
-    position: absolute; */
-    width: 11.25rem;
     height: 2.063rem;
-    left: 17.375rem;
-    top: 17.188rem;
+    margin-left: 7.375rem;
+    margin-top: 0.5rem;
     background: #f2dede;
     border: 1px solid #ebcccc;
     border-radius: 4px;
-    /* font-size: 1rem;
-    line-height: 1.5rem; */
     color: #a94442;
 }
 
 .error-msg {
-    /* display: none;
-    position: absolute; */
-    width: 17.313rem;
     height: 1.5rem;
+    width: 17.313rem;
     left: 32.813rem;
     top: 14.75rem;
-    /* font-size: 1rem;
-    line-height: 1.5rem; */
     color: #d9534f;
 }
 
 .results-title {
-    position: absolute;
     width: 11.375rem;
     height: 4.5rem;
-    left: 10.25rem;
-    top: 21.688rem;
     font-size: 3.375rem;
     color: #373a3c;
+    margin-left: 10.25rem;
+    margin-top: 5rem;
 }
 
 .results-table {
-    position: absolute;
-    left: 10.25rem;
-    top: 29.938rem;
     font-size: 1.5rem;
     color: #373a3c;
+    margin-left: 10.25rem;
+    margin-top: 3.75rem;
 }
 
 .save-calculation-results {
-    position: absolute;
-    left: 11.813rem;
-    top: 17.188rem;
     font-size: 1rem;
     color: #373a3c;
 }
 
 .sort-data {
-    position: absolute;
-    left: 10.25rem;
-    top: 27.313rem;
     width: 7.625rem;
     height: 2.375rem;
     background: #e6e6e6;

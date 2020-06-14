@@ -13,8 +13,8 @@
     <!-- ↓↓ container ↓↓-->
     <div class="container-fluid">
         <!-- ↓↓ Row for Milestone 3 ↓↓-->
-        <div class="row">
-            <div class="col-lg-12 p-4 position-relative">
+        <div class="row m-0 p-0">
+            <div class="col-lg-12 p-4">
                 <!-- ↓↓ Row for Milestone 3 titel ↓↓-->
                 <div class="row">
                     <div class="col-lg-12 d-flex">
@@ -24,23 +24,30 @@
                 <!-- ↑↑ End Row Milestone 3 title ↑↑-->
 
                 <!-- ↓↓ Row for Milestone 3 calculation ↓↓-->
-                <div class="row p-0">
+                <div class="row fibonacci-calculation">
                     <div class="col-lg-12 m-0 p-0">
-                        <div class="d-flex align-content-center m-0 p-0">
-                            <p class="fibonacci-text d-flex">The Fibonacci of</p>
-                            <input class="input-calculator" type="number" id="myNumber" name="myNumber" value="0" />
-                            <button type="button" class="btn btn-primary btn-sm btn-calculator" id="btnCalculator">
+                        <div class="d-flex align-items-center m-0 p-0">
+                            <p class="fibonacci-text d-flex align-self-center pt-2">
+                                The Fibonacci of
+                            </p>
+                            <input class="input-calculator d-flex" type="number" id="myNumber" name="myNumber" value="0" />
+                            <button type="button" class="btn btn-primary btn-sm btn-calculator " id="btnCalculator">
                   is
                 </button>
-                            <p id="myResult" name="myResult" class="my-result"></p>
+                            <p id="myResult d-flex" name="myResult" class="my-result ml-3"></p>
+                            <div class="m-0 p-0 d-flex">
+                                <img src="./img/loading.png" class="load ml-3" id="load" />
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- ↑↑ End Row Milestone 3 calculation ↑↑-->
             </div>
-            <!-- ↑↑ End Row for Milestone  3 ↑↑-->
+            <!-- ↑↑ End Row Milestone 3 calculation ↑↑-->
         </div>
-        <!-- ↑↑ End of container ↑↑-->
+    </div>
+    <!-- ↑↑ End Row for Milestone  3 ↑↑-->
+    </div>
+    <!-- ↑↑ End of container ↑↑-->
 </body>
 <footer>
     <div class="row">
@@ -75,6 +82,6 @@
     </div>
 </footer>
 
-<script src="./JS/milestone3.js"></script>
+<script src="./JS/milestone3.js "></script>
 
 </html>

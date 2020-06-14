@@ -14,6 +14,7 @@ document.onload = callPastResults();
 button.addEventListener("click", callFibonacciResult);
 
 function callFibonacciResult() {
+    myResult.classList.remove("error-msg");
     if (!saveCalculationCheckBox.checked) {
         internalResult();
     } else if (saveCalculationCheckBox.checked) {
