@@ -14,46 +14,43 @@ function getFibonacciFromServer() {
         load.style.display = "none";
         myResult.style.display = "none";
         errorMsg50.style.display = "block";
-        errorMsg42.style.display = "none";
-        errorMsg0.style.display = "none";
+        myResult.classList.remove("error-msg");
     } else if (myNumber.value <= 50) {
-        if (myNumber.value == 42) {
-            load.style.display = "none";
-            myResult.style.display = "none";
-            errorMsg50.style.display = "none";
-            errorMsg42.style.display = "block";
-            errorMsg0.style.display = "none";
-        } else if (myNumber.value <= 0) {
-            load.style.display = "none";
-            myResult.style.display = "none";
-            errorMsg42.style.display = "none";
-            errorMsg50.style.display = "none";
-            errorMsg0.style.display = "block";
-        } else {
-            let SERVER_URL = `http://localhost:5050/fibonacci/${myNumber.value}`;
-            load.style.display = "block";
-            myResult.style.display = "none";
-            errorMsg42.style.display = "none";
-            errorMsg50.style.display = "none";
-            errorMsg0.style.display = "none";
-            fetch(SERVER_URL)
-                .then(function(response) {
-                    console.log(response);
+        let SERVER_URL = `http://localhost:5050/fibonacci/${myNumber.value}`;
+        load.style.display = "block";
+        myResult.style.display = "none";
+        errorMsg50.style.display = "none";
+        fetch(SERVER_URL)
+            .then(function(response) {
+                console.log(response);
+                console.log(response.status);
+                if (response.status === 200) {
                     return response.json();
-                })
-                .catch(function(error) {
-                    console.error(`Error`, error);
-                })
-                .then(function(data) {
+                }
+                if (response.status === 400) {
+                    console.log(response.text);
+                    return response.text();
+                }
+            })
+            .catch(function(error) {
+                console.error(`Error`, error);
+            })
+            .then(function(data) {
+                if (typeof data === "object") {
                     console.log(data);
                     myResult.innerText = data.result;
                     load.style.display = "none";
                     myResult.style.display = "block";
-                    errorMsg42.style.display = "none";
                     errorMsg50.style.display = "none";
-                    errorMsg0.style.display = "none";
-                });
-        }
+                } else if (typeof data === "string") {
+                    console.log(data);
+                    myResult.innerText = `Server Error: ${data}`;
+                    load.style.display = "none";
+                    myResult.style.display = "block";
+                    errorMsg50.style.display = "none";
+                    myResult.classList.add("error-msg");
+                }
+            });
     }
 }
 

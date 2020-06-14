@@ -127,8 +127,7 @@ p {
 }
 
 .error-msg-50,
-.error-msg-42,
-.error-msg-0 {
+.error-msg {
     display: none;
     position: absolute;
     font-size: 1rem;
@@ -150,8 +149,7 @@ p {
     color: #a94442;
 }
 
-.error-msg-42,
-.error-msg-0 {
+.error-msg {
     /* display: none;
     position: absolute; */
     width: 17.313rem;
@@ -187,4 +185,16 @@ p {
     top: 17.188rem;
     font-size: 1rem;
     color: #373a3c;
+}
+
+.sort-data {
+    position: absolute;
+    left: 10.25rem;
+    top: 27.313rem;
+    width: 7.625rem;
+    height: 2.375rem;
+    background: #e6e6e6;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
