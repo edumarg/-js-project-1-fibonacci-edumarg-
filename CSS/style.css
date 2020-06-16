@@ -69,7 +69,8 @@ p {
     }
 }
 
-.load {
+.load,
+.loadResult {
     display: none;
     animation: load 3s linear infinite;
 }
@@ -91,7 +92,7 @@ p {
 
 .error-msg {
     height: 1.5rem;
-    width: 17.313rem;
+    width: 35rem;
     left: 32.813rem;
     top: 14.75rem;
     color: #d9534f;
@@ -126,7 +127,7 @@ p {
 }
 
 .user-select {
-    width: 7.625rem;
+    width: 9rem;
     height: 2.375rem;
     background: #e6e6e6;
 }

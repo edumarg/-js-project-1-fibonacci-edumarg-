@@ -2,6 +2,7 @@ let myNumber = document.getElementById("myNumber");
 let myResult = document.getElementById("myResult");
 let button = document.getElementById("btnCalculator");
 let load = document.getElementById("load");
+let loadResults = document.getElementById("loadResults");
 let sortSelect = document.getElementById("sortSelect");
 let errorMsg50 = document.getElementById("errorMsg50");
 let receivedData;
@@ -80,14 +81,15 @@ function fetchFibonacciServer() {
 }
 
 function callPastResults() {
+    loadResult.style.display = "block";
     let SERVER_URL = "http://localhost:5050/getFibonacciResults";
     fetch(SERVER_URL)
         .then(function(response) {
             return response.json();
         })
         .then(function(data) {
+            loadResult.style.display = "none";
             receivedData = data.results;
-            // showDataFromServer(receivedData);
             sortedDataFromServer();
         })
         .catch(function(error) {
