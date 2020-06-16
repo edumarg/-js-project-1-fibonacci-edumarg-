@@ -10,6 +10,8 @@ let resultsTable = document.getElementById("resultsTable");
 let saveCalculationCheckBox = document.getElementById(
     "saveCalculationCheckBox"
 );
+let myModal = document.getElementById("myModal");
+let myModalText = document.getElementById("myModalText");
 
 function callFibonacciResult() {
     myResult.classList.remove("error-msg");
@@ -68,6 +70,8 @@ function fetchFibonacciServer() {
                 myResult.innerText = `Server Error: ${data}`;
                 handleLoader("none", "block", "none");
                 myResult.classList.add("error-msg");
+                myModalText.innerText = data;
+                $("#myModal").modal("show");
             }
         })
         .catch(function(error) {
