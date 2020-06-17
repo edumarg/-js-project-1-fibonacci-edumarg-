@@ -1,7 +1,5 @@
 body {
     background-color: #ffff;
-    font-style: normal;
-    font-weight: normal;
     line-height: 74.938 rem;
     color: #373a3c;
     min-height: 100%;
@@ -108,7 +106,6 @@ p {
 .results-table {
     font-size: 1.5rem;
     color: #373a3c;
-    text-decoration: none;
     list-style: none;
 }
 

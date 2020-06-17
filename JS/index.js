@@ -1,18 +1,18 @@
-let myNumber = document.getElementById("myNumber");
-let myResult = document.getElementById("myResult");
-let button = document.getElementById("btnCalculator");
-let load = document.getElementById("load");
-let loadResults = document.getElementById("loadResults");
-let sortSelect = document.getElementById("sortSelect");
-let errorMsg50 = document.getElementById("errorMsg50");
+const btnCalculator = document.getElementById("btnCalculator");
+const myNumber = document.getElementById("myNumber");
+const myResult = document.getElementById("myResult");
+const load = document.getElementById("load");
+const loadResults = document.getElementById("loadResults");
+const sortSelect = document.getElementById("sortSelect");
+const errorMsg50 = document.getElementById("errorMsg50");
 let receivedData;
 let sortedData;
-let resultsTable = document.getElementById("resultsTable");
-let saveCalculationCheckBox = document.getElementById(
+const resultsTable = document.getElementById("resultsTable");
+const saveCalculationCheckBox = document.getElementById(
     "saveCalculationCheckBox"
 );
-let myModal = document.getElementById("myModal");
-let myModalText = document.getElementById("myModalText");
+const myModal = document.getElementById("myModal");
+const myModalText = document.getElementById("myModalText");
 
 function callFibonacciResult() {
     myResult.classList.remove("error-msg");
@@ -41,16 +41,23 @@ function handleLoader(display1, display2, display3) {
     errorMsg50.style.display = display3;
 }
 
+// funtion to toggle display mode of an element
+// function handleDisplay(element) {
+//     if (element.style.display === "none") {
+//         element.style.display = "block";
+//     } else {
+//         element.style.display = "none";
+//     }
+// }
+
 function fibonacciFromServer() {
-    if (myNumber.value > 50) {
-        handleLoader("none", "none", "block");
-    } else if (myNumber.value <= 50) {
-        fetchFibonacciServer();
-    }
+    if (myNumber.value > 50) handleLoader("none", "none", "block");
+    else etchFibonacciServer();
 }
 
 function fetchFibonacciServer() {
     let SERVER_URL = `http://localhost:5050/fibonacci/${myNumber.value}`;
+
     handleLoader("block", "none", "none");
     fetch(SERVER_URL)
         .then(function(response) {
@@ -65,6 +72,9 @@ function fetchFibonacciServer() {
         .then(function(data) {
             if (typeof data === "object") {
                 myResult.innerText = data.result;
+                handleDisplay(load);
+                handleDisplay(myResult);
+                handleDisplay(errorMsg50);
                 handleLoader("none", "block", "none");
                 myResult.classList.remove("error-msg");
             } else if (typeof data === "string") {
@@ -90,6 +100,7 @@ function callPastResults() {
         .then(function(data) {
             loadResult.style.display = "none";
             receivedData = data.results;
+
             sortedDataFromServer();
         })
         .catch(function(error) {
@@ -102,30 +113,50 @@ function showDataFromServer(data) {
     for (let i = 0; i < Object.keys(data).length; i++) {
         let li = document.createElement("li");
         li.classList.add("list-group-item");
-        li.innerHTML = `The Fibonacci of <strong>${
-      data[i].number
-    }</strong> is <strong>${data[i].result}</strong> Calculated at ${new Date(
-      data[i].createdDate
-    )}`;
+        li.insertAdjacentHTML(
+            "afterbegin",
+            `The Fibonacci of <strong>${data[i].number}</strong> is <strong>${
+        data[i].result
+      }</strong> Calculated at ${new Date(data[i].createdDate)}`
+        );
         resultsTable.appendChild(li);
     }
 }
 
 function sortedDataFromServer() {
-    if (sortSelect.value == 1) {
-        sortedData = receivedData.sort((a, b) => a.number - b.number);
-    } else if (sortSelect.value == 2) {
-        sortedData = receivedData.sort((a, b) => b.number - a.number);
-    } else if (sortSelect.value == 3) {
-        sortedData = receivedData.sort((a, b) => a.createdDate - b.createdDate);
-    } else if (sortSelect.value == 4) {
-        sortedData = receivedData.sort((a, b) => b.createdDate - a.createdDate);
-    } else {
-        sortedData = receivedData;
+    switch (sortSelect.value) {
+        case "1":
+            {
+                sortedData = receivedData.sort((a, b) => a.number - b.number);
+                showDataFromServer(sortedData);
+                break;
+            }
+        case "2":
+            {
+                sortedData = receivedData.sort((a, b) => b.number - a.number);
+                showDataFromServer(sortedData);
+                break;
+            }
+        case "3":
+            {
+                sortedData = receivedData.sort((a, b) => a.createdDate - b.createdDate);
+                showDataFromServer(sortedData);
+                break;
+            }
+        case "4":
+            {
+                sortedData = receivedData.sort((a, b) => b.createdDate - a.createdDate);
+                showDataFromServer(sortedData);
+                break;
+            }
+        default:
+            {
+                sortedData = receivedData;
+                showDataFromServer(sortedData);
+            }
     }
-    showDataFromServer(sortedData);
 }
 
 document.onload = callPastResults();
-button.addEventListener("click", callFibonacciResult);
+btnCalculator.addEventListener("click", callFibonacciResult);
 sortSelect.addEventListener("change", sortedDataFromServer);
