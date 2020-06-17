@@ -72,9 +72,6 @@ function fetchFibonacciServer() {
         .then(function(data) {
             if (typeof data === "object") {
                 myResult.innerText = data.result;
-                handleDisplay(load);
-                handleDisplay(myResult);
-                handleDisplay(errorMsg50);
                 handleLoader("none", "block", "none");
                 myResult.classList.remove("error-msg");
             } else if (typeof data === "string") {
