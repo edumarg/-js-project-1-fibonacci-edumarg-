@@ -65,6 +65,10 @@ async function fetchFibonacciServer() {
         data = await response.json();
     } else if (data.status === 400) {
         data = await response.text();
+    } else {
+        myModalText.innerText = `HTTP error! status: ${response.status}`;
+        $("#myModal").modal("show");
+        throw new Error(`HTTP error! status: ${response.status}`);
     }
     // Determine type of data to display the correct one (the number or text)
     if (typeof data === "object") {
