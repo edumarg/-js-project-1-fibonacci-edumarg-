@@ -1,112 +1,108 @@
 body {
-    background-color: #ffff;
-    line-height: 74.938 rem;
-    color: #373a3c;
-    min-height: 100%;
+  /* background-color: #ffff;
+    color: #373a3c; */
+  background-image: url("../img/chalkboard-1395x930.png");
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  line-height: 74.938 rem;
+  min-height: 100%;
 }
 
 h1 {
-    font-size: 5.263rem;
-}
-
-p {
-    color: #373a3c;
+  font-size: 5.263rem;
 }
 
 .fibonacci-text {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    color: #373a3c;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .btn-calculator {
-    font-size: 1rem;
-    line-height: 1.313rem;
-    text-align: center;
-    color: #ffffff;
-    width: 2.438rem;
-    height: 2.375rem;
+  font-size: 1rem;
+  line-height: 1.313rem;
+  text-align: center;
+  color: #ffffff;
+  width: 2.438rem;
+  height: 2.375rem;
 }
 
 .input-calculator {
-    width: 5.375rem;
-    height: 2.375rem;
-    border: 1px solid #cccccc;
-    border-radius: 0.25rem;
+  width: 5.375rem;
+  height: 2.375rem;
+  border: 1px solid #cccccc;
+  border-radius: 0.25rem;
 }
 
 .my-result {
-    display: block;
-    width: 1.75rem;
-    height: 1.5rem;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    color: #373a3c;
+  display: block;
+  width: 1.75rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
 }
 
 @keyframes load {
-    to {
-        transform: rotateZ(360deg);
-    }
+  to {
+    transform: rotateZ(360deg);
+  }
 }
 
 .load,
 .loadResult {
-    display: none;
-    animation: load 3s linear infinite;
+  display: none;
+  animation: load 3s linear infinite;
 }
 
 .error-msg-50,
 .error-msg {
-    display: none;
-    font-size: 1rem;
+  display: none;
+  font-size: 1rem;
 }
 
 .error-msg-50 {
-    height: 2.063rem;
-    background: #f2dede;
-    border: 1px solid #ebcccc;
-    border-radius: 4px;
-    color: #a94442;
+  height: 2.063rem;
+  background: #f2dede;
+  border: 1px solid #ebcccc;
+  border-radius: 4px;
+  color: #a94442;
 }
 
 .error-msg {
-    height: 1.5rem;
-    width: 35rem;
-    left: 32.813rem;
-    top: 14.75rem;
-    color: #d9534f;
+  height: 1.5rem;
+  width: 35rem;
+  left: 32.813rem;
+  top: 14.75rem;
+  color: #d9534f;
 }
 
 .results-title {
-    width: 11.375rem;
-    height: 4.5rem;
-    font-size: 3.375rem;
-    color: #373a3c;
+  width: 11.375rem;
+  height: 4.5rem;
+  font-size: 3.375rem;
 }
 
 .results-table {
-    font-size: 1.5rem;
-    color: #373a3c;
-    list-style: none;
+  font-size: 1.5rem;
+  list-style: none;
+  color: grey;
 }
 
 .save-calculation-results {
-    font-size: 1rem;
-    color: #373a3c;
+  font-size: 1rem;
 }
 
 .sort-data {
-    width: 7.625rem;
-    height: 2.375rem;
-    background: #e6e6e6;
-    border: 1px solid #cccccc;
-    box-sizing: border-box;
-    border-radius: 4px;
+  width: 7.625rem;
+  height: 2.375rem;
+  background: #e6e6e6;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
 .user-select {
-    width: 9rem;
-    height: 2.375rem;
-    background: #e6e6e6;
+  width: 9rem;
+  height: 2.375rem;
+  background: #e6e6e6;
 }
